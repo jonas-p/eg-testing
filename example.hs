@@ -7,12 +7,13 @@ plusOne :: Int -> Int
 plusOne a = a + 1
 
 -- Returns the third element of a triplet
--- E.g. third ("one","two","three") -> "three"
--- E.g. third (1,2,3) -> 2
+-- E.g. third (1,2,3) -> 3
 third :: (a,b,c) -> c
 third (_,_,x) = x
 
--- Returns the same string
--- E.g. same "one" -> "one"
-same :: String -> String
-same str = str
+-- This function should return the product
+-- of two integers (it doesn't).
+-- E.g. prod 1 1 -> 1
+-- E.g. prod 5 4 -> 20
+prod :: Integer -> Integer -> Integer
+prod a b = a + b

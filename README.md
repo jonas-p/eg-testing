@@ -34,15 +34,16 @@ plusOne :: Int -> Int
 plusOne a = a + 1
 
 -- Returns the third element of a triplet
--- E.g. third ("one","two","three") -> "three"
--- E.g. third (1,2,3) -> 2
+-- E.g. third (1,2,3) -> 3
 third :: (a,b,c) -> c
 third (_,_,x) = x
 
--- Returns the same string
--- E.g. same "one" -> "one"
-same :: String -> String
-same str = str
+-- This function should return the product
+-- of two integers (it doesn't).
+-- E.g. prod 1 1 -> 1
+-- E.g. prod 5 4 -> 20
+prod :: Integer -> Integer -> Integer
+prod a b = a + b
 ```
 **Output from running _eg-testing example.hs_**
 ```
@@ -52,9 +53,9 @@ Importing Prelude
 Testing module Example
 OK    plusOne (-1)
 OK    plusOne 99
-OK    third ("one","two","three")
-FAIL  third (1,2,3) - EXPECTED "2", GOT: "3"
-OK    same "one"
+OK    third (1,2,3)
+FAIL  prod 1 1 - EXPECTED "1", GOT: "2"
+FAIL  prod 5 4 - EXPECTED "20", GOT: "9"
 
 Done
 ```
